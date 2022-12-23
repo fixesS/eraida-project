@@ -1,0 +1,12 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+The label episode1 is defined twice, at File "game/episodes/episod1.rpyc", line 1:
+
+and File "game/episodes/episode1.rpy", line 1:
+label episode1:
+
+
+Ren'Py Version: Ren'Py 8.0.3.22090809
+Mon Dec 19 20:37:28 2022
