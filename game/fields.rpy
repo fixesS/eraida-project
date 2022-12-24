@@ -39,8 +39,11 @@ define irma = Character('Ирма', color ="#ff751a",image = "irma")
 define hr = Character('Рекрутер', color ="#3cdbff",image = "hr")
 define diana = Character('Диана',color = "#3d3d5c",image = "diana")
 define nana = Character('Нана',color = "#ffd480",image = "nana")
-
-
+define nana_hidden = Character('{sc=1}????{/sc}',color = "#ffd480",image = "nana_hidden")
+define mark = Character("Марк", color = "#e69900",image = "mark")
+define aeby = Character('Эби',color = "#ffd480",image = "aeby")
+define aeby_hidden = Character('{sc=1}???{/sc}',color = "#ffd480",image = "aeby_hidden")
+define harry = Character("Гарри", color = "#e69900",image = "harry")
 
 
 #Plot variables
@@ -50,6 +53,11 @@ define company_with_E_ep1 = False #todo АККУРАТНО возможно я �
 define company_feedback_ep1 = False #todo АККУРАТНО
 
 define jobint_answers_ep2 = 0 # >0-green <0-blue
+
+define number_of_steps = 0
+define nana_visited = False
+define mark_visited = False
+define diana_visited = False
 
 
 define quick_menu = True

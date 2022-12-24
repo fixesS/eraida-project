@@ -1,22 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/episodes/episode2.rpy", line 681, in script
-    jump episode3
-ScriptError: could not find label 'episode3'.
+  File "game/episodes/episode3.rpy", line 612, in script
+    arthur_nlteche "Я посмотрю внимательно все твои записи и схемы, и затем можем приступать к работе!"
+Exception: Sayer 'arthur_nlteche' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/episodes/episode2.rpy", line 681, in script
-    jump episode3
-  File "D:\Programming\RenPy\renpy-8.0.3-sdk\renpy\ast.py", line 1974, in execute
-    rv = renpy.game.script.lookup(target)
-  File "D:\Programming\RenPy\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'episode3'.
+  File "game/episodes/episode3.rpy", line 612, in script
+    arthur_nlteche "Я посмотрю внимательно все твои записи и схемы, и затем можем приступать к работе!"
+  File "D:\Programming\RenPy\renpy-8.0.3-sdk\renpy\ast.py", line 881, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "D:\Programming\RenPy\renpy-8.0.3-sdk\renpy\ast.py", line 774, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who)
+Exception: Sayer 'arthur_nlteche' is not defined.
 
 Windows-10-10.0.19044 AMD64
 Ren'Py 8.0.3.22090809
-ERAIDAproject 2.0
-Mon Dec 19 21:51:28 2022
+ERAIDAproject 3.0
+Sat Dec 24 20:07:00 2022
