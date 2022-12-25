@@ -17,12 +17,15 @@ label episode_1:
     return
 
 label conference_ep1:
-
     $ quick_menu = True
     $ renpy.block_rollback()
 
     scene bg conference day 
     with fade 
+
+    play music "/audio/music/base1.ogg" fadein 1.0 volume 1.4 loop
+
+    play sound "/audio/sfx/conference.ogg" fadein 3.0 volume 0.05 loop
 
     show teo normal at outofmap
 
@@ -39,18 +42,21 @@ label conference_ep1:
     menu:
 
         "Идем, только в темпе, у меня есть важные дела":
+            stop sound fadeout 1.0
             jump cafe_ep1
 
         "Как нибудь в другой раз. Сегодня у Ирмы день рождение, так что сейчас я поеду в больницу":
 
             elliot "Как знаешь, передавай ей мои поздравления"
-
+            stop sound fadeout 1.0
             jump street_ep1
     return
  
 label cafe_ep1:
     scene bg cafe day
     with fade
+
+    queue sound "audio/sfx/cafe.ogg" fadein 1.0 loop volume 0.2
 
     show teo normal at outofmap
     
@@ -78,7 +84,7 @@ label cafe_ep1:
             teo "Я не задумывался об этом, разве это настолько важно по сравнению с тем…"
 
             elliot "Как она с тобой до сих пор общается вообще?"
-
+            stop sound fadeout 1.0
             jump shop_together_ep1
 
         "[[Отказаться](Ну уж нет, Ирма такая вредная, мне точно влетит за то, что я привел незнакомого ей человека, и сомневаюсь, что это хорошо отразится на его психике)":
@@ -86,14 +92,17 @@ label cafe_ep1:
             teo "Знаешь, я лучше один съезжу, все-таки вы незнакомы, странно будет в ее же день рождения приводить тебя, познакомлю вас в другой раз. "
             teo "Надо еще забежать в магазин, купить ей подарок"
             elliot "Как хочешь, тогда в следующий раз"
-            
+            stop sound fadeout 1.0
             jump shop_alone_ep1
 
     return
 
 label street_ep1:
+
     scene bg street city day
     with fade
+
+    queue sound "audio/sfx/street.ogg" fadein 1.0 loop volume 0.05
 
     show teo normal at outofmap
 
@@ -102,7 +111,7 @@ label street_ep1:
     "Ее мечты стать футболисткой вдребезги разбились из-за травмы ног, и кажется, что надежды уже нет: ей то ставят аппараты, то убирают, но ничего не меняется."
     "Она прекрасно держится, вполне себе жизнерадостна, но я ведь ее знаю – эта жизнь сейчас для нее невыносима"
     "Возможно ли помочь ей вернуться к прежней жизни хоть ненадолго?"
-
+    stop sound fadeout 1.0
     jump shop_alone_ep1
 
     return 
@@ -110,6 +119,8 @@ label street_ep1:
 label shop_together_ep1:
     scene bg shop day 
     with fade 
+
+    queue sound "audio/sfx/shop.ogg" fadein 1.0 loop volume 0.05
 
     show teo normal at outofmap
 
@@ -139,7 +150,7 @@ label shop_together_ep1:
             elliot "Зря ты это взял…"
             teo "Почему? Забавно же"
             elliot "Поговорим об этом, когда она это увидит… Будь я на ее месте - убил бы тебя."
-
+    stop sound fadeout 1.0
     jump hospital_hallway_together_ep1
 
     return
@@ -148,6 +159,8 @@ label shop_together_ep1:
 label shop_alone_ep1:
     scene bg shop day 
     with fade 
+
+    queue sound "audio/sfx/shop.ogg" fadein 1.0 loop volume 0.05
 
     show teo normal at outofmap
 
@@ -161,7 +174,7 @@ label shop_alone_ep1:
             $gift_to_irma_ep1 = 2
         "[[Футболка с забавной зверюшкой](Ей либо понравится, либо она швырнет в меня этим, в любом случае это лучше, чем просто принести свою одинокую тушку…)":
             $gift_to_irma_ep1 = 3
-
+    stop sound fadeout 1.0
     jump hospital_hallway_alone_ep1
 
     return   
@@ -169,6 +182,8 @@ label shop_alone_ep1:
 label hospital_hallway_together_ep1:
     scene bg hospital hallway day
     with fade
+
+    stop music fadeout 2.0
 
     show teo normal at outofmap
 
@@ -187,6 +202,8 @@ label hospital_hallway_alone_ep1:
     scene bg hospital hallway day
     with fade
 
+    stop music fadeout 2.0
+
     show teo normal at outofmap
 
     teo "Так, так, так… Надо собраться! Сейчас бодренько захожу и дарю ей подарок…"
@@ -198,6 +215,8 @@ label hospital_hallway_alone_ep1:
 label hospital_ward_with_E_ep1:
     scene bg hospital ward
     with fade
+
+    play music "/audio/music/base1.ogg" fadein 1.0 volume 1.0 loop
     
     show teo normal at outofmap
 
@@ -261,6 +280,8 @@ label hospital_ward_ep1:
     scene bg hospital ward
     with fade
     
+    play music "/audio/music/base1.ogg" fadein 1.0 volume 1.0 loop
+
     show teo normal at outofmap
 
     show irma normal at middlepos
@@ -299,11 +320,13 @@ label hospital_ward_ep1:
         teo "Ахах, ну Ирма, не злись ты так – я всего лишь хотел купить забавный подарок"
         irma @ smile "Посмотрим, как тебе будет забавно, когда ты откроешь подарок от меня на свой день рождения"
     
+    stop music fadeout 5.0
     teo "Мы давно не общались, ты не звонишь… Занимаешься чем-нибудь последнее время?"
     irma "Эм, нет…Вот бы было легко найти себе новые интересы, кажется для меня это сложновато – у меня ни к чему не лежит душа"
-    irma @ sad "В смысле, я не просто лежу целыми днями, я пытаюсь чем-то заниматься, но все не то, понимаешь?"
+    queue music "/audio/music/irma_sad.ogg" fadein 1.0 volume 0.6 loop
+    irma sad "В смысле, я не просто лежу целыми днями, я пытаюсь чем-то заниматься, но все не то, понимаешь?"
     irma "Я даже начинала осваивать новую профессию. Возможно ты считаешь, что я просто не хочу, но это не так! Я люблю учиться, ты же знаешь… "
-    irma @ sad "Но это все мне не подходит."
+    irma "Но это все мне не подходит."
     irma "И…я хочу сказать, что несмотря на мое поведение, я правда ценю, что ты пришел… Ты же знаешь, да?"
     irma "Даже мои родители не рядом со мной в этот день, как всегда заняты. "
     irma "Раньше меня это не так смущало, ведь я не была здесь и не была в таком состоянии, но сейчас это ощущается совсем по-другому."
@@ -322,6 +345,8 @@ label hospital_ward_ep1:
 label street2_together_ep1:
     scene bg street city evening
     with fade
+
+    play sound "audio/sfx/street.ogg" fadein 2.0 loop volume 0.15
 
     show teo normal at outofmap
 
@@ -349,6 +374,8 @@ label street2_together_ep1:
     elliot @ smile "Я лишь попрошу его поскорее принять тебя на собеседование, не волнуйся. К тому же, я уверен, что ты идеальный кандидат, да ты и сам это знаешь "
     teo "Ладно, спасибо, друг, посмотрим, во что все это выльется…"
 
+    stop sound fadeout 2.0
+
     jump room_ending2_ep1
 
     return
@@ -357,11 +384,16 @@ label street2_alone_ep1:
     scene bg street city evening
     with fade
 
+    play sound "audio/sfx/street.ogg" fadein 3.0 loop volume 0.15 
+
     show teo normal at outofmap
     
     "Перед тем, как начать новую жизнь, она просто хочет еще раз испытать счастливые моменты прошлого. Это не дает ей покоя все это время…"
     "Она важна для меня. У меня сердце разрывается, когда я вижу ее в таком состоянии, я должен придумать, как ей помочь. Так больше не может продолжаться."
     "О, кажется, мне пришли письма с приглашением на собеседование"
+
+    stop music fadeout 3.0
+
     "Что…Почему собеседование в VRHere и NL Technology в один день? Да еще и с промежутком в час… Я смогу успеть только в одно место!"
     "Видимо, это момент выбрать, к какой сфере моя душа лежит больше… По крайней мере, если меня точно примут, то именно там я буду работать еще долгое время"
 
@@ -379,6 +411,12 @@ label street2_alone_ep1:
     return
     
 label vrhere_ep1:
+
+    stop sound fadeout 2.0
+    stop music fadeout 2.0
+
+    queue music "/audio/music/company_base.ogg" fadein 2.0 volume 0.6 loop
+    
     scene bg job big evening
     with fade
 
@@ -400,6 +438,12 @@ label vrhere_ep1:
     return
 
 label nl_tech_ep1:
+
+    stop sound fadeout 2.0
+    stop music fadeout 2.0
+
+    play music "/audio/music/company_base.ogg" fadein 1.0 volume 0.6 loop
+
     scene bg job small evening
     with fade
 
@@ -442,6 +486,7 @@ label near_job_ep1:
             "Что за ненормальные тут шатаются… Какой-то странный дед. Он уж точно не сможет мне помочь"
             teo "Аа… извините, я пойду"
 
+    stop music fadeout 2.0
     jump room_ending1_ep1 
 
     return 
@@ -495,9 +540,13 @@ label room_ending2_ep1:
 
 
 label save_scene_ep1:
+    $ quick_menu = False
     $ renpy.block_rollback()
     scene black 
     with fade
+    
+    stop sound fadeout 0.2
+    stop music fadeout 0.2
 
     $ renpy.pause(0.5, hard='True')
 

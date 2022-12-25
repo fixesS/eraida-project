@@ -10,6 +10,8 @@ label episode2:
 
     stop sound fadeout 1.0
 
+    $ quick_menu = True
+    play music "/audio/music/company_base.ogg" fadein 1.0 volume 0.6 loop
     if(company_with_E_ep1):
         if(company_chosen_ep1 == 1):
             jump vrhere_with_E_ep2
@@ -93,7 +95,7 @@ label vrhere_with_E_jobint_ep2:
 
 label vrhere_with_E_hallway_ep2:
     scene bg job hallway day
-    with fade
+    with fade 
 
     show teo normal at outofmap
 
@@ -142,6 +144,8 @@ label vrhere_with_E_cafe_ep2:
     scene bg cafe day 
     with fade 
 
+    queue sound "audio/sfx/cafe.ogg" fadein 1.0 loop volume 0.2
+
     show teo normal at outofmap
 
     show elliot normal at leftpos
@@ -177,6 +181,8 @@ label vrhere_with_E_cafe_ep2:
     elliot "Очень смешно, Тэо!"
     elliot "Если на меня будут давить с двух сторон, то я точно получу второе образование, так что осторожнее со словами!"
 
+    stop sound fadeout 2.0
+    stop music fadeout 2.0
     jump room_ending_ep2
  
 label nltech_with_E_ep2:
@@ -296,6 +302,8 @@ label nltech_with_E_cafe_ep2:
     scene bg cafe day 
     with fade 
 
+    queue sound "audio/sfx/cafe.ogg" fadein 1.0 loop volume 0.2
+
     show teo normal at outofmap
 
     show elliot normal at leftpos
@@ -323,6 +331,8 @@ label nltech_with_E_cafe_ep2:
     teo "Он очень упертый, и я не понимаю, почему он так отрекается от своей судьбы! Только не говори, что вдруг решил стать хирургом или кем-то еще? Твои родители будут невероятно рады конечно, но поверь – это не твое!"
     elliot "Очень смешно, Тэо! Если на меня будут давить с двух сторон, то я точно получу второе образование, так что осторожнее со словами!"
 
+    stop sound fadeout 2.0
+    stop music fadeout 2.0
     jump room_ending_ep2
     return 
 
@@ -429,6 +439,8 @@ label vrhere_alone_cafe_ep2:
     scene bg cafe day 
     with fade 
 
+    queue sound "audio/sfx/cafe.ogg" fadein 1.0 loop volume 0.2
+
     show teo normal at outofmap
 
     show arthur_vrhere normal at middlepos
@@ -449,12 +461,15 @@ label vrhere_alone_cafe_ep2:
     teo "Спасибо, я ценю ваше желание помочь, хоть меня еще и не приняли "
     "Артур Ловатия? Ого, они с Эллиотом однофамильцы, здорово, это ведь такая редкая фамилия…"
 
+    stop sound fadeout 2.0
     jump vrhere_alone_callE_ep2
     return 
 
 label vrhere_alone_callE_ep2:
     scene bg street country day
     with fade
+
+    queue sound "audio/sfx/street.ogg" fadein 1.0 loop volume 0.2
 
     show teo normal at outofmap
 
@@ -479,6 +494,8 @@ label vrhere_alone_callE_ep2:
     elliot "Дядя Артур – именно тот человек, что нужен для подобного. Он не может сидеть без дела! Это отличная новость, к тому же, я уверен, что тебя примут с твоим то опытом и достижениями"
     teo "Сейчас остается лишь ждать две недели…"
 
+    stop music fadeout 2.0
+    stop sound fadeout 2.0
     jump room_ending_ep2
     return
 
@@ -602,12 +619,15 @@ label nltech_alone_cafe_ep2:
     teo "Спасибо, я ценю ваше желание помочь, хоть меня еще и не приняли "
     "Артур Ловатия? Ого, они с Эллиотом однофамильцы, здорово, это ведь такая редкая фамилия…"
 
+    stop sound fafeout 2.0
     jump nltech_alone_callE_ep2
     return
 
 label nltech_alone_callE_ep2:
     scene bg street country day
     with fade
+
+    queue sound "audio/sfx/street.ogg" fadein 1.0 loop volume 0.2
 
     show teo normal at outofmap
 
@@ -630,6 +650,8 @@ label nltech_alone_callE_ep2:
     elliot "Дядя Артур – именно тот человек, что нужен для подобного. Он не может сидеть без дела! Это отличная новость, к тому же, я уверен, что тебя примут с твоим то опытом и достижениями"
     teo "Сейчас остается лишь ждать две недели…"
 
+    stop music fadeout 2.0
+    stop sound fadeout 2.0
     jump room_ending_ep2
     return
 
@@ -662,6 +684,7 @@ label room_ending_ep2:
     return
 
 label save_scene_ep2:
+    $quick_menu = False
     $ renpy.block_rollback()
     scene black 
     with fade
