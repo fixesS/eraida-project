@@ -1,22 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/episodes/episode3.rpy", line 612, in script
-    arthur_nlteche "Я посмотрю внимательно все твои записи и схемы, и затем можем приступать к работе!"
-Exception: Sayer 'arthur_nlteche' is not defined.
+  File "game/episodes/episode4.rpy", line 164, in script
+    show nana little_angry at righpos
+  File "game/episodes/episode4.rpy", line 164, in <module>
+    show nana little_angry at righpos
+NameError: name 'righpos' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/episodes/episode3.rpy", line 612, in script
-    arthur_nlteche "Я посмотрю внимательно все твои записи и схемы, и затем можем приступать к работе!"
-  File "D:\Programming\RenPy\renpy-8.0.3-sdk\renpy\ast.py", line 881, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "D:\Programming\RenPy\renpy-8.0.3-sdk\renpy\ast.py", line 774, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'arthur_nlteche' is not defined.
+  File "game/episodes/episode4.rpy", line 164, in script
+    show nana little_angry at righpos
+  File "D:\Programming\RenPy\renpy-8.0.3-sdk\renpy\ast.py", line 1408, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "D:\Programming\RenPy\renpy-8.0.3-sdk\renpy\ast.py", line 1367, in show_imspec
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "D:\Programming\RenPy\renpy-8.0.3-sdk\renpy\ast.py", line 1367, in <listcomp>
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "D:\Programming\RenPy\renpy-8.0.3-sdk\renpy\python.py", line 1092, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "D:\Programming\RenPy\renpy-8.0.3-sdk\renpy\python.py", line 1085, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/episodes/episode4.rpy", line 164, in <module>
+    show nana little_angry at righpos
+NameError: name 'righpos' is not defined
 
 Windows-10-10.0.19044 AMD64
 Ren'Py 8.0.3.22090809
-ERAIDAproject 3.0
-Sat Dec 24 20:07:00 2022
+ERAIDAproject 4.0
+Tue Dec 27 19:27:22 2022

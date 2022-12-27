@@ -21,7 +21,7 @@ init :
                 renpy.show(self.chr.image_tag, at_list=[postsayzoom])    
 
     #Positions of charcters
-    $leftpos = Position(xalign = 0.1, yalign = 1)
+    $leftpos = Position(xalign = -0.1, yalign = 1)
     $middlepos = Position(xalign = 0.5, yalign = 1)
     $rightpos = Position(xalign = 1.1, yalign = 1) 
     $outofmap = Position(xalign = 80, yalign = 1) 
@@ -44,6 +44,7 @@ define mark = Character("Марк", color = "#e69900",image = "mark")
 define aeby = Character('Эби',color = "#ffd480",image = "aeby")
 define aeby_hidden = Character('{sc=1}???{/sc}',color = "#ffd480",image = "aeby_hidden")
 define harry = Character("Гарри", color = "#e69900",image = "harry")
+define boss = Character('Руководитель', color ="#ad1515",image = "boss")
 
 
 #Plot variables
@@ -54,11 +55,14 @@ define company_feedback_ep1 = False #todo АККУРАТНО
 
 define jobint_answers_ep2 = 0 # >0-green <0-blue
 
-define number_of_steps = 0
-define nana_visited = False
-define mark_visited = False
-define diana_visited = False
+define number_of_steps_ep3 = 0
+define nana_visited_ep3 = False
+define mark_visited_ep3 = False
+define diana_visited_ep3 = False
+define aeby_visited_ep3 = False
+define harry_visited_ep3 = False
 
+define prsentation_ep4 = 0 # 1-good 2-bad
 
 define quick_menu = True
 

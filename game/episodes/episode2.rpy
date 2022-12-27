@@ -619,7 +619,7 @@ label nltech_alone_cafe_ep2:
     teo "Спасибо, я ценю ваше желание помочь, хоть меня еще и не приняли "
     "Артур Ловатия? Ого, они с Эллиотом однофамильцы, здорово, это ведь такая редкая фамилия…"
 
-    stop sound fafeout 2.0
+    stop sound fadeout 2.0
     jump nltech_alone_callE_ep2
     return
 
@@ -671,7 +671,7 @@ label room_ending_ep2:
     show screen notify("Спустя какое-то время ...")
     pause(3)
 
-    show bg room day
+    scene bg room day
     with fade
 
     show teo normal at outofmap

@@ -130,10 +130,10 @@ label vrhere_5_ep3:
     return
 
 label vrhere_6_ep3:
-    $number_of_steps = 0
-    $nana_visited = False
-    $mark_visited = False
-    $diana_visited = False
+    $number_of_steps_ep3 = 0
+    $nana_visited_ep3 = False
+    $mark_visited_ep3_ep3 = False
+    $diana_visited_ep3 = False
 
     scene bg job office mark day 
     with fade
@@ -161,19 +161,19 @@ label vrhere_6_ep3:
         "К кому хочешь пойти?"
 
         "Я бы хотел поговорить с Дианой. Будет интересно узнать о том, чем конкретно она сейчас занимается, что изучает":
-            $number_of_steps+=1
+            $number_of_steps_ep3+=1
             jump vrhere_7_diana_ep3
         "Я бы хотел поговорить с Наной. Будет интересно узнать о технической части работы, какую разработку она сейчас ведет":
-            $number_of_steps+=1
+            $number_of_steps_ep3+=1
             jump vrhere_7_nana_ep3
         "Я бы хотел поговорить с Марком. Он отвечает за внутреннюю часть проектов, наверняка это очень сложно и интересно. Будет интересно разузнать о его деятельности.":
-            $number_of_steps+=1
+            $number_of_steps_ep3+=1
             jump vrhere_7_mark_ep3
 
     return 
 
 label vrhere_7_diana_ep3:
-    $diana_visited = True
+    $diana_visited_ep3 = True
 
     scene bg job office diana day
     with fade
@@ -198,22 +198,22 @@ label vrhere_7_diana_ep3:
     teo "И правда, ха-ха!"
     teo "В общем, спасибо за разговор, было правда интересно узнать о вашей деятельности"
 
-    if(number_of_steps<2):
+    if(number_of_steps_ep3<2):
         menu:
             "Куда мне сходить еще?"
 
             "Я бы хотел поговорить с Наной. Будет интересно узнать о технической части работы, какую разработку она сейчас ведет":
-                $number_of_steps+=1
+                $number_of_steps_ep3+=1
                 jump vrhere_7_nana_ep3
             "Я бы хотел поговорить с Марком. Он отвечает за внутреннюю часть проектов, наверняка это очень сложно и интересно. Будет интересно разузнать о его деятельности.":
-                $number_of_steps+=1
+                $number_of_steps_ep3+=1
                 jump vrhere_7_mark_ep3
     
     jump vrhere_8_ep3
     return
 
 label vrhere_7_nana_ep3:
-    $nana_visited = True
+    $nana_visited_ep3 = True
     scene bg job lab2
     with fade
     
@@ -240,22 +240,22 @@ label vrhere_7_nana_ep3:
     nana "Сейчас я пытаюсь довести до совершенства наш VR-шлем, но в перспективах у нас новый проект, подробностей не знаю, но компания хочет что-то уникальное"
     teo "Здорово, спасибо"
 
-    if(number_of_steps<2):
+    if(number_of_steps_ep3<2):
         menu:
             "Куда мне сходить еще?"
 
             "Я бы хотел поговорить с Дианой. Будет интересно узнать о том, чем конкретно она сейчас занимается, что изучает":
-                $number_of_steps+=1
+                $number_of_steps_ep3+=1
                 jump vrhere_7_diana_ep3
             "Я бы хотел поговорить с Марком. Он отвечает за внутреннюю часть проектов, наверняка это очень сложно и интересно. Будет интересно разузнать о его деятельности.":
-                $number_of_steps+=1
+                $number_of_steps_ep3+=1
                 jump vrhere_7_mark_ep3
     
     jump vrhere_8_ep3
     return
 
 label vrhere_7_mark_ep3:
-    $mark_visited = True
+    $mark_visited_ep3 = True
     scene bg job office mark day
     with fade
 
@@ -274,15 +274,15 @@ label vrhere_7_mark_ep3:
     teo "Пока в студенчестве я работал над различными проектами, иногда приходилось совмещать все сферы деятельности, так что понимаю, как это нелегко"
     mark @ smile "Действительно? Ну, я рад, обращайся если что-то нужно"
     
-    if(number_of_steps<2):
+    if(number_of_steps_ep3<2):
         menu:
             "Куда мне сходить еще?"
 
             "Я бы хотел поговорить с Дианой. Будет интересно узнать о том, чем конкретно она сейчас занимается, что изучает":
-                $number_of_steps+=1
+                $number_of_steps_ep3+=1
                 jump vrhere_7_diana_ep3
             "Я бы хотел поговорить с Наной. Будет интересно узнать о технической части работы, какую разработку она сейчас ведет":
-                $number_of_steps+=1
+                $number_of_steps_ep3+=1
                 jump vrhere_7_nana_ep3
     
     jump vrhere_8_ep3
@@ -300,7 +300,7 @@ label vrhere_8_ep3:
     arthur_vrhere @ big_smile "Надеюсь команда не держала тебя в заложниках? Ха-ха! Даже если бы долго ждал, дел всегда невпроворот и всегда есть чем заняться"
     arthur_vrhere "Итак, давай обсудим твои наработки и конкретные идеи"
 
-    if(diana_visited):
+    if(diana_visited_ep3):
         teo "Я слышал, что у компании как раз курс на неинвазивные нейроинтерфейсы, к тому же более продвинутые, поэтому есть следующая идея"
     else:
         teo "Я слышал, что у компании как раз курс на что-то новое и уникальное, поэтому есть следующая идея"
@@ -430,10 +430,10 @@ label nltech_5_ep3:
     return
 
 label nltech_6_ep3:
-    $number_of_steps = 0
-    $aeby_visited = False
-    $harry_visited = False
-    $diana_visited = False
+    $number_of_steps_ep3 = 0
+    $aeby_visited_ep3 = False
+    $harry_visited_ep3 = False
+    $diana_visited_ep3 = False
 
     scene bg job office mark day 
     with fade
@@ -460,19 +460,19 @@ label nltech_6_ep3:
         "К кому хочешь пойти?"
 
         "Я бы хотел поговорить с Дианой. Будет интересно узнать о том, чем конкретно она сейчас занимается, что изучает":
-            $number_of_steps +=1
+            $number_of_steps_ep3 +=1
             jump nltech_7_diana_ep3
         "Я бы хотел поговорить с Эби. Будет интересно узнать о технической части работы, какую разработку она сейчас ведет":
-            $number_of_steps +=1
+            $number_of_steps_ep3 +=1
             jump nltech_7_aeby_ep3
         "Я бы хотел поговорить с Гарри. Он отвечает за внутреннюю часть проектов, наверняка это очень сложно и интересно. Будет интересно разузнать о его деятельности.":
-            $number_of_steps +=1
+            $number_of_steps_ep3 +=1
             jump nltech_7_harry_ep3            
 
     return
 
 label nltech_7_diana_ep3:
-    $diana_visited = True
+    $diana_visited_ep3 = True
 
     scene bg job office diana day
     with fade
@@ -497,15 +497,15 @@ label nltech_7_diana_ep3:
     teo "И правда, ха-ха!"
     teo "В общем, спасибо за разговор, было правда интересно узнать о вашей деятельности"
 
-    if(number_of_steps<2):
+    if(number_of_steps_ep3<2):
         menu:
             "Куда мне сходить еще?"
 
             "Я бы хотел поговорить с Эби. Будет интересно узнать о технической части работы, какую разработку она сейчас ведет":
-                $number_of_steps +=1
+                $number_of_steps_ep3 +=1
                 jump nltech_7_aeby_ep3
             "Я бы хотел поговорить с Гарри. Он отвечает за внутреннюю часть проектов, наверняка это очень сложно и интересно. Будет интересно разузнать о его деятельности.":
-                $number_of_steps +=1
+                $number_of_steps_ep3 +=1
                 jump nltech_7_harry_ep3 
     
     jump nltech_8_ep3
@@ -513,7 +513,7 @@ label nltech_7_diana_ep3:
 
 
 label nltech_7_aeby_ep3:
-    $aeby_visited = True
+    $aeby_visited_ep3 = True
     scene bg job lab2
     with fade
     
@@ -540,22 +540,22 @@ label nltech_7_aeby_ep3:
     aeby "Сейчас я пытаюсь довести до совершенства наш VR-шлем, но в перспективах у нас новый проект, подробностей не знаю, но компания хочет что-то уникальное"
     teo "Здорово, спасибо"
 
-    if(number_of_steps<2):
+    if(number_of_steps_ep3<2):
         menu:
             "Куда мне сходить еще?"
 
             "Я бы хотел поговорить с Дианой. Будет интересно узнать о том, чем конкретно она сейчас занимается, что изучает":
-                $number_of_steps +=1
+                $number_of_steps_ep3 +=1
                 jump nltech_7_diana_ep3
             "Я бы хотел поговорить с Гарри. Он отвечает за внутреннюю часть проектов, наверняка это очень сложно и интересно. Будет интересно разузнать о его деятельности.":
-                $number_of_steps +=1
+                $number_of_steps_ep3 +=1
                 jump nltech_7_harry_ep3 
     
     jump nltech_8_ep3
     return
 
 label nltech_7_harry_ep3:
-    $mark_visited = True
+    $mark_visited_ep3 = True
     scene bg job office mark day
     with fade
 
@@ -574,15 +574,15 @@ label nltech_7_harry_ep3:
     teo "Пока в студенчестве я работал над различными проектами, иногда приходилось совмещать все сферы деятельности, так что понимаю, как это нелегко"
     harry @ smile "Действительно? Ну, я рад, обращайся если что-то нужно"
     
-    if(number_of_steps<2):
+    if(number_of_steps_ep3<2):
         menu:
             "Куда мне сходить еще?"
 
             "Я бы хотел поговорить с Дианой. Будет интересно узнать о том, чем конкретно она сейчас занимается, что изучает":
-                $number_of_steps+=1
+                $number_of_steps_ep3+=1
                 jump nltech_7_diana_ep3
             "Я бы хотел поговорить с Эби. Будет интересно узнать о технической части работы, какую разработку она сейчас ведет":
-                $number_of_steps +=1
+                $number_of_steps_ep3 +=1
                 jump nltech_7_aeby_ep3
     
     jump nltech_8_ep3
@@ -600,7 +600,7 @@ label nltech_8_ep3:
     arthur_nltech @ big_smile "Надеюсь команда не держала тебя в заложниках? Ха-ха! Даже если бы долго ждал, дел всегда невпроворот и всегда есть чем заняться"
     arthur_nltech "Итак, давай обсудим твои наработки и конкретные идеи"
 
-    if(diana_visited):
+    if(diana_visited_ep3):
         teo "Я слышал, что у компании как раз курс на неинвазивные нейроинтерфейсы, к тому же более продвинутые, поэтому есть следующая идея"
     else:
         teo "Я слышал, что у компании как раз курс на что-то новое и уникальное, поэтому есть следующая идея"
