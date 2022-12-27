@@ -26,7 +26,7 @@ define config.end_splash_transition = Dissolve(0.2)
 
 ## Версия игры.
 
-define config.version = "4.0"
+define config.version = "5.0"
 
 
 ## Текст, помещённый в экран "Об игре". Поместите текст между тройными скобками.
