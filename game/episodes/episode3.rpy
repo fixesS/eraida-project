@@ -10,7 +10,7 @@ label episode3:
 
     stop sound fadeout 1.0
     $quick_menu = True
-    play music "/audio/music/company_base2.ogg" fadein 1.0 volume 0.6 loop
+    play music "/audio/music/company_base.ogg" fadein 1.0 volume 0.6 loop
     if(company_chosen_ep1 == 1):
         jump vrhere_1_ep3
     else:

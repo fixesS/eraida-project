@@ -25,26 +25,32 @@ init :
     $middlepos = Position(xalign = 0.5, yalign = 1)
     $rightpos = Position(xalign = 1.1, yalign = 1) 
     $outofmap = Position(xalign = 80, yalign = 1) 
-    $outofmap2 = Position(xalign = 100, yalign = 1) 
+    $outofmap2 = Position(xalign = 100, yalign = 1)
+
+    $pos2left2 = Position(xalign = -0.5,yalign = 1)
+    $pos2left1 = Position(xalign = -0.1,yalign = 1)
+    $pos2middle = Position(xalign = 0.5,yalign = 1)
+    $pos2right1 = Position(xalign = 1.1,yalign = 1)
+    $pos2right2 = Position(xalign = -1.5,yalign = 1) 
      
 
 #Characters
 define elliot = Character('Эллиот', color="#0066ff", image = "elliot")
 define teo = Character('Тэо', color="#f2f2f2", image = "teo")
-define arthur_vrhere = Character('Артур', color="#884dff",image = "arthur_vrhere")
+define arthur_vrhere = Character('Артур', color="#09ff00",image = "arthur_vrhere")
 define arthur_vrhere_hidden = Character('{sc=1}?????{/sc}',image = "arthur_vrhere_hidden")
-define arthur_nltech = Character('Артур', color="#884dff",image = "arthur_nltech")# Оставил два варианат артура чтобы можно было легко заменить спрайты
+define arthur_nltech = Character('Артур', color="#09ff00",image = "arthur_nltech")# Оставил два варианат артура чтобы можно было легко заменить спрайты
 define arthur_nltech_hidden = Character('{sc=1}?????{/sc}',image = "arthur_nltech_hidden")
 define irma = Character('Ирма', color ="#ff751a",image = "irma")
-define hr = Character('Рекрутер', color ="#3cdbff",image = "hr")
-define diana = Character('Диана',color = "#3d3d5c",image = "diana")
+define hr = Character('Рекрутер', color ="#b6f2ff",image = "hr")
+define diana = Character('Диана',color = "#9b0bee",image = "diana")
 define nana = Character('Нана',color = "#ffd480",image = "nana")
 define nana_hidden = Character('{sc=1}????{/sc}',color = "#ffd480",image = "nana_hidden")
 define mark = Character("Марк", color = "#e69900",image = "mark")
 define aeby = Character('Эби',color = "#ffd480",image = "aeby")
 define aeby_hidden = Character('{sc=1}???{/sc}',color = "#ffd480",image = "aeby_hidden")
 define harry = Character("Гарри", color = "#e69900",image = "harry")
-define boss = Character('Руководитель', color ="#ad1515",image = "boss")
+define boss = Character('Руководитель', color ="#ff8f8f",image = "boss")
 
 
 #Plot variables
@@ -52,6 +58,7 @@ define gift_to_irma_ep1 = 0 # 1-Любимый торт Ирмы  2-Букет �
 define company_chosen_ep1 = 0 # 1-VRHere 2-NL Technology
 define company_with_E_ep1 = False #todo АККУРАТНО возможно я пропущу обработку пременной в будущем
 define company_feedback_ep1 = False #todo АККУРАТНО
+define elliot_and_irma_met = False
 
 define jobint_answers_ep2 = 0 # >0-green <0-blue
 

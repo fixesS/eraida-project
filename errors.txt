@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/episodes/episode2.rpy", line 622: expected end of line
-    stop sound fafeout 2.0
-               ^
-
-File "game/episodes/episode4.rpy", line 173: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "Я думаю это будет неплохой опыт, так что мы с Наной могли бы попробовать презентовать разработку сами."
-                                                                                                            ^
+File "game/episodes/episode5.rpy", line 334: expected end of line
+    queue music "/audio/music/irma_sad.ogg" fadein 3.0 volume 0.6 lo
+                                                                  ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Tue Dec 27 19:19:33 2022
+Wed Dec 28 19:23:25 2022

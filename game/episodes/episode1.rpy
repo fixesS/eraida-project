@@ -213,6 +213,8 @@ label hospital_hallway_alone_ep1:
     return 
 
 label hospital_ward_with_E_ep1:
+    $elliot_and_irma_met = True
+
     scene bg hospital ward
     with fade
 
@@ -276,7 +278,9 @@ label hospital_ward_with_E_ep1:
 
     return
 
-label hospital_ward_ep1:
+label hospital_ward_ep1: 
+    $elliot_and_irma_met = False
+
     scene bg hospital ward
     with fade
     

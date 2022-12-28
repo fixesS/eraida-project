@@ -255,12 +255,11 @@ label nltech_with_E_hallway_ep2:
     scene bg job hallway day
     with fade
 
-    show teo normal at outofmap
-
     show elliot normal at middlepos
     with dissolve
 
-    ""
+    show teo normal at outofmap
+
     elliot @ confused "И как? Чего такой хмурый?"
     teo "Хмурый? Нет, все, кажется, прошло довольно неплохо!"
     elliot "По тебе и не поймешь! Ну, расскажи хоть что-нибудь?"
