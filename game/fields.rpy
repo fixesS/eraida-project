@@ -69,29 +69,24 @@ define diana_visited_ep3 = False
 define aeby_visited_ep3 = False
 define harry_visited_ep3 = False
 
+define presenters_ep4 = 0 # 1-pro 2-noob
 define prsentation_ep4 = 0 # 1-good 2-bad
 
 define quick_menu = True
 
 #Main menu animation
 image main_menu_animated:
-    At("bg conference day",chromatic_offset)
-    pause 5
-    At("bg conference evening",chromatic_offset)
-    pause 5
-    At("bg conference night",chromatic_offset)
-    pause 5
     At("bg hospital building day",chromatic_offset)
     pause 5
     At("bg hospital building morning",chromatic_offset)
     pause 5
     At("bg hospital building evening",chromatic_offset)
     pause 5
-    At("bg room day",chromatic_offset)
+    At("bg irma room day",chromatic_offset)
     pause 5
-    At("bg room evening",chromatic_offset)
+    At("bg irma room evening",chromatic_offset)
     pause 5
-    At("bg room night",chromatic_offset)
+    At("bg irma room night",chromatic_offset)
     pause 5
     At("bg hospital out day",chromatic_offset)
     pause 5 
@@ -101,9 +96,16 @@ image main_menu_animated:
     pause 5
     At("bg hospital out night",chromatic_offset)
     pause 5
-    At("bg street city day",chromatic_offset)
+    At("bg street country day",chromatic_offset)
     pause 5
-    At("bg street city evening",chromatic_offset)
+    At("bg street country morning",chromatic_offset)
     pause 5
-    At("bg street city night",chromatic_offset)
+    At("bg street country night",chromatic_offset)
+    pause 5
     repeat
+
+image locker_room_chroma:
+    At("bg irma locker_room day",chromatic_offset)
+
+image football3_chroma:
+    At("bg football3",chromatic_offset)

@@ -1,15 +1,15 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/episodes/episode3.rpy", line 323, in script
-    with fade
-OSError: Couldn't find file 'audio/music/company_base2.ogg'.
+  File "game/episodes/episode6.rpy", line 305, in script
+    with glitch
+TypeError: __init__() missing 1 required positional argument: 'child'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/episodes/episode3.rpy", line 323, in script
-    with fade
+  File "game/episodes/episode6.rpy", line 305, in script
+    with glitch
   File "D:\Programming\RenPy\renpy-8.0.3-sdk\renpy\ast.py", line 1658, in execute
     renpy.exports.with_statement(trans, paired=paired)
   File "D:\Programming\RenPy\renpy-8.0.3-sdk\renpy\exports.py", line 1657, in with_statement
@@ -18,24 +18,11 @@ Full traceback:
     return self.interact(trans_pause=True,
   File "D:\Programming\RenPy\renpy-8.0.3-sdk\renpy\display\core.py", line 3377, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "D:\Programming\RenPy\renpy-8.0.3-sdk\renpy\display\core.py", line 4103, in interact_core
-    renpy.audio.audio.periodic()
-  File "D:\Programming\RenPy\renpy-8.0.3-sdk\renpy\audio\audio.py", line 1166, in periodic
-    raise_(exc[0], exc[1], exc[2])
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 441, in raise_
-  File "D:\Programming\RenPy\renpy-8.0.3-sdk\renpy\audio\audio.py", line 1144, in periodic_thread_main
-    periodic_pass()
-  File "D:\Programming\RenPy\renpy-8.0.3-sdk\renpy\audio\audio.py", line 1086, in periodic_pass
-    c.periodic()
-  File "D:\Programming\RenPy\renpy-8.0.3-sdk\renpy\audio\audio.py", line 517, in periodic
-    topf = load(filename)
-  File "D:\Programming\RenPy\renpy-8.0.3-sdk\renpy\audio\audio.py", line 70, in load
-    rv = renpy.loader.load(fn)
-  File "D:\Programming\RenPy\renpy-8.0.3-sdk\renpy\loader.py", line 820, in load
-    raise IOError("Couldn't find file '%s'." % name)
-OSError: Couldn't find file 'audio/music/company_base2.ogg'.
+  File "D:\Programming\RenPy\renpy-8.0.3-sdk\renpy\display\core.py", line 3752, in interact_core
+    trans = self.ongoing_transition[None](
+TypeError: __init__() missing 1 required positional argument: 'child'
 
 Windows-10-10.0.19044 AMD64
 Ren'Py 8.0.3.22090809
-ERAIDAproject 5.1
-Wed Dec 28 19:44:15 2022
+ERAIDAproject 6.0
+Fri Dec 30 05:55:08 2022

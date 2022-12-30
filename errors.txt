@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/episodes/episode5.rpy", line 334: expected end of line
-    queue music "/audio/music/irma_sad.ogg" fadein 3.0 volume 0.6 lo
-                                                                  ^
+File "game/episodes/episode6.rpy", line 304: expected 'image_name_component' not found.
+    scene ("bg irma locker_room day",chromatic_offset)
+          ^
+
+File "game/episodes/episode6.rpy", line 322: expected 'image_name_component' not found.
+    scene ("bg footbal3",chromatic_offset)
+          ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Wed Dec 28 19:23:25 2022
+Fri Dec 30 05:12:27 2022
